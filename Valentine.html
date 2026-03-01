@@ -18,13 +18,14 @@
       position: relative;
     }
 
-    /* dark tint so hearts + card stay readable over the image */
+    /* dark tint so content stays readable over the image */
     body::before {
       content: '';
       position: fixed;
       inset: 0;
       background: rgba(0, 0, 0, 0.35);
       z-index: 0;
+      pointer-events: none;
     }
 
     /* ── Falling hearts background ── */
