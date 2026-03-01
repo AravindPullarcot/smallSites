@@ -9,15 +9,27 @@
     body {
       margin: 0;
       height: 100vh;
-      background: linear-gradient(135deg, #ffccd5, #ffe6eb);
+      background: url('assets/image/download.jpeg') no-repeat center center / cover;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: 0;
+      pointer-events: none;
     }
 
     .container {
+      position: relative;
+      z-index: 1;
       text-align: center;
       padding: 20px;
       max-width: 320px;
@@ -27,6 +39,8 @@
     h1 {
       font-size: 1.8rem;
       margin-bottom: 30px;
+      color: white;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7);
     }
 
     .buttons {
